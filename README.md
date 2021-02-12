@@ -3,8 +3,11 @@
 
 ##  Usage example
 PS C:\Users\llluc> mario.py
+
 How many seconds between plays? -> 210
+
 210
+
 File path -> E:\OneDrive\Documents\Voicemeeter\MarioTempoEsgotadoRecord 2021-02-12 at 18h15m36s.wav
 
 ## Depedencies

@@ -17,4 +17,15 @@
 
 
 import time
-import
+import playsound
+
+#Asks how many seconds between plays and saves answer as t
+t = int(input("How many seconds between plays? -> "))
+print(t)
+
+
+f = input("")
+
+
+while True:
+    playsound()

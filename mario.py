@@ -17,16 +17,18 @@
 
 
 import time
-import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 
 #Asks how many seconds between plays and saves answer as t
 t = int(input("How many seconds between plays? -> "))
 print(t)
 
 
-f = input("File path -> ")
+a = input("File path -> ")
+f = AudioSegment.from_wav(a)
 
 
 while True:
-    playsound(f)
+    play(f)
     time.sleep(t)

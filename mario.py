@@ -28,5 +28,5 @@ f = input("File path -> ")
 
 
 while True:
-    playsound(f)
+    playsound.playsound(f)
     time.sleep(t)

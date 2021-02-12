@@ -14,3 +14,6 @@ File path -> E:\OneDrive\Documents\Voicemeeter\MarioTempoEsgotadoRecord 2021-02-
 - python 3.9.1 or more recent
 - time (pip install time)
 - playsound (pip install playsound)
+
+## The name
+Mario is the name of my private Math teacher

@@ -24,8 +24,9 @@ t = int(input("How many seconds between plays? -> "))
 print(t)
 
 
-f = input("")
+f = input("File path -> ")
 
 
 while True:
-    playsound()
+    playsound(f)
+    time.sleep(t)

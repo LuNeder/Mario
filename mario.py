@@ -22,19 +22,27 @@ import sys
 
 args = str(sys.argv)
 
-#Asks how many seconds between plays and saves answer as t
-t = int(input("How many seconds between plays? -> "))
-print(t)
+#Asks how many seconds between plays and saves answer as t (unless arg --help is passed)
+if (args.__contains__("--help"))
+    random = "help"
+else:
+    t = int(input("How many seconds between plays? -> "))
+    print(t)
 
 #Checks if random mode is active
 if (args.__contains__("--random")):
     random = "true"
-    print("Random mode: will randomly play a different audio file every" + str(t) + "seconds")
+    print("Random mode: will randomly play a different audio file from the specified directory every" + str(t) + "seconds")
+    d = input("Directory path to get files from -> ")
+elif (args.__contains__("--help")):
+    print("--help: Displays this message")
+    print("--random: Random mode: will randomly play a different audio file from the specified directory every t seconds")
+    print("no args: Normal mode: will play a specific audio file every t seconds")
 else:
     random = "false"
     print("Normal mode: will play a specific audio file every" + str(t) + "seconds")
+    f = input("File path -> ")
 
-f = input("File path -> ")
 n = 0
 
 while True:

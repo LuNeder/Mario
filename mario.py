@@ -18,7 +18,15 @@
 
 import time
 import playsound
+import sys
 
+args = str(sys.argv)
+if (args.__contains__("--random")):
+    random = "true"
+    print("Random mode: will choose random audio file each time")
+else:
+    random = "false"
+    print("Normal mode: ")
 #Asks how many seconds between plays and saves answer as t
 t = int(input("How many seconds between plays? -> "))
 print(t)

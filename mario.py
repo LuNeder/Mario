@@ -19,12 +19,14 @@
 import time
 import playsound
 import sys
+import glob
+import random as randomizer
 
 #Safe command lines args as args
 args = str(sys.argv)
 
 #Asks how many seconds between plays and saves answer as t (unless arg --help is passed)
-if (args.__contains__("--help"))
+if (args.__contains__("--help")):
     random = "help"
 else:
     t = int(input("How many seconds between plays? -> "))
@@ -33,7 +35,7 @@ else:
 #Checks if random mode is active and ask for directory, file path or shows help
 if (args.__contains__("--random")):
     random = "true"
-    print("Random mode: will randomly play a different audio file from the specified directory every" + str(t) + "seconds")
+    print("Random mode: will randomly play a different audio file from the specified directory every " + str(t) + " seconds")
     d = input("Directory path to get files from -> ")
     print(d)
 elif (args.__contains__("--help")):
@@ -43,7 +45,7 @@ elif (args.__contains__("--help")):
     print("no args: Normal mode: will play a specific audio file every t seconds")
 else:
     random = "false"
-    print("Normal mode: will play a specific audio file every" + str(t) + "seconds")
+    print("Normal mode: will play a specific audio file every " + str(t) + " seconds")
     f = input("File path -> ")
     print(f)
 
@@ -56,4 +58,17 @@ if random == "false":
         v = str(n)
         print("Played " + v + " times")
         time.sleep(t)
-else
+elif random == "true":
+    while True:
+        all_files = glob.glob(d)
+        file = randomizer.choice(all_files)
+        print("Playing " + str(file))
+        playsound.playsound(file)
+        n = n + 1
+        v = str(n)
+        print("Played " + v + " times")
+        time.sleep(t)
+elif random == "help":
+    print(" ")
+else:
+    print("something went wrong")

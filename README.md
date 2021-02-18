@@ -2,7 +2,7 @@
  Play sounds automatically from time to time
 
 ##  Usage example
-PS C:\Users\llluc> mario.py
+PS C:\Users\llluc> python3 ./mario.py
 
 How many seconds between plays? -> 210
 

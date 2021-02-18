@@ -25,8 +25,11 @@ print(t)
 
 
 f = input("File path -> ")
-
+n = 0
 
 while True:
     playsound.playsound(f)
+    n = n + 1
+    v = str(n)
+    print("Played " + v + " times")
     time.sleep(t)

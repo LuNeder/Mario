@@ -1,19 +1,18 @@
 # Mario
  Play sounds automatically from time to time
 
-##  Usage example
-PS C:\Users\llluc> python3 ./mario.py
-
-How many seconds between plays? -> 210
-
-210
-
-File path -> E:\OneDrive\Documents\Voicemeeter\MarioTempoEsgotadoRecord 2021-02-12 at 18h15m36s.wav
+##  Usage
+- Normal mode: python3 ./mario.py
+- Random mode: python3 ./mario.py --random
+- Explain what each mode do: python3 ./mario.py --help
 
 ## Depedencies
 - python 3.9.1 or more recent
-- time (pip install time)
 - playsound (pip install playsound)
+- time (pip install time) may ship with python, no install needed)
+- sys (pip install sys) (may ship with python, no install needed)
+- glob (pip install glob) (may ship with python, no install needed)
+- random (pip install random) (may ship with python, no install needed)
 
 ## The name
 Mario is the name of my private Math teacher

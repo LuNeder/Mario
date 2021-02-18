@@ -21,16 +21,18 @@ import playsound
 import sys
 
 args = str(sys.argv)
-if (args.__contains__("--random")):
-    random = "true"
-    print("Random mode: will choose random audio file each time")
-else:
-    random = "false"
-    print("Normal mode: ")
+
 #Asks how many seconds between plays and saves answer as t
 t = int(input("How many seconds between plays? -> "))
 print(t)
 
+#Checks if random mode is active
+if (args.__contains__("--random")):
+    random = "true"
+    print("Random mode: will randomly play a different audio file every" + str(t) + "seconds")
+else:
+    random = "false"
+    print("Normal mode: will play a specific audio file every" + str(t) + "seconds")
 
 f = input("File path -> ")
 n = 0

@@ -49,26 +49,37 @@ else:
     f = input("File path -> ")
     print(f)
 
+#Set played times to 0
 n = 0
 
+#Runs the selected mode, depending on the args
 if random == "false":
+    #A while loop
     while True:
+        #Play the sound
         playsound.playsound(f)
+        #Update the times played and print it
         n = n + 1
         v = str(n)
         print("Played " + v + " times")
+        #Waits t seconds
         time.sleep(t)
 elif random == "true":
+    #A while loop
     while True:
+        #Get all files in the directory (and save as all_files), choose a random one (and save as file) and print the choosen file's name
         all_files = glob.glob(d)
         file = randomizer.choice(all_files)
         print("Playing " + str(file))
+        #Play the sound
         playsound.playsound(file)
+        #Update the times played and print it
         n = n + 1
         v = str(n)
         print("Played " + v + " times")
+        #Waits t seconds
         time.sleep(t)
 elif random == "help":
-    print(" ")
+    print(" ") #Print an empty line, since help was already shown
 else:
-    print("something went wrong")
+    print("something went wrong") #Mario is made in a way that the variable random will always be either true, false or help. Because of this, Mario should never arrive at this else and if it does it's because something went very wrong.

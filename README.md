@@ -9,6 +9,7 @@
 ## Depedencies
 - python 3.9.1 or more recent
 - playsound (pip install playsound)
+- datetime (pip install datetime)
 - time (pip install time) may ship with python, no install needed)
 - sys (pip install sys) (may ship with python, no install needed)
 - glob (pip install glob) (may ship with python, no install needed)

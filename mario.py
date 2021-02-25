@@ -21,6 +21,7 @@ import playsound
 import sys
 import glob
 import random as randomizer
+from datetime import datetime
 
 #Safe command lines args as args
 args = str(sys.argv)
@@ -58,10 +59,12 @@ if random == "false":
     while True:
         #Play the sound
         playsound.playsound(f)
-        #Update the times played and print it
+        #Update the times played and print it. Get the time and print it.
         n = n + 1
         v = str(n)
-        print("Played " + v + " times")
+        agr = datetime.now()
+        ptime = agr.strftime("%H:%M:%S")
+        print("Played " + v + " times - " + ptime)
         #Waits t seconds
         time.sleep(t)
 elif random == "true":
@@ -73,10 +76,12 @@ elif random == "true":
         print("Playing " + str(file))
         #Play the sound
         playsound.playsound(file)
-        #Update the times played and print it
+        #Update the times played and print it. Get the time and print it.
         n = n + 1
         v = str(n)
-        print("Played " + v + " times")
+        agr = datetime.now()
+        ptime = agr.strftime("%H:%M:%S")
+        print("Played " + v + " times - " + ptime)
         #Waits t seconds
         time.sleep(t)
 elif random == "help":

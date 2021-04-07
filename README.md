@@ -17,3 +17,5 @@
 
 ## The name
 Mario is the name of my private Math teacher
+
+Mario (both the program and the teacher) uses he/him pronouns
